@@ -1,0 +1,2154 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #E3F4FC;
+}
+
+.row {
+  margin: 0 !important;
+}
+
+/* -----------------------------------------------------------------------------
+  Style
+----------------------------------------------------------------------------- */
+
+:focus {
+  outline: none !important;
+}
+
+.text-15 {
+  font-size: 10px !important;
+}
+
+.text-white {
+  color: #F3FAFE !important;
+}
+
+.text-black {
+  color: #121430 !important;
+}
+
+.text-orange {
+  color: #FAAF41 !important;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.justify {
+  text-align: justify;
+}
+
+/* -----------------------------------------------------------------------------
+  Navigation
+----------------------------------------------------------------------------- */
+
+.nav-menu {
+  padding: 1rem 0;
+  transition: all 0.3s ease;
+  font-family: 'Righteous', cursive;
+  width: 100% !important;
+  z-index: 1050 !important;
+}
+
+.nav-link {
+  padding: 8px 20px !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #F3FAFE !important;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #FAAF41 !important;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #FAAF41 !important;
+}
+
+.nav-menu.is-scrolling,
+.nav-menu.menu-is-open {
+  background-color: #10173E;
+}
+
+.nav-menu.is-scrolling {
+  padding: 0;
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+  .navbar-nav>.nav-item>.nav-link.active:after {
+    content: "";
+    left: 1rem;
+    right: 1rem;
+    bottom: 5px;
+    height: 1px;
+    position: absolute;
+  }
+}
+
+@media (max-width:991px) {
+  .navbar-nav.is-scrolling {
+      padding-bottom: 1rem;
+  }
+  .navbar-nav .nav-item {
+      text-align: center;
+  }
+}
+
+.navbar-dark .navbar-toggler {
+  border: none;
+  background: transparent !important;
+}
+
+.navbar-toggler:focus {
+  outline: none !important;
+  background: transparent !important;
+}
+
+.navbar-toggler .icon-bar {
+  background-color: #F3FAFE;
+  transform: rotate(0deg) translate(0px, 0px);
+  transition: ease all .2s;
+}
+
+.navbar-toggler .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 0px;
+}
+
+.navbar-toggler .icon-bar + .icon-bar {
+  margin-top: 4px;
+}
+
+.icon-bar:nth-child(2) {
+  width: 22px;
+  transition: ease all .2s;
+}
+
+.navbar-toggler:active>.icon-bar:nth-child(2) {
+  width: 22px;
+  transition: ease all .2s;
+}
+
+.navbar-toggler:not(.collapsed) .icon-bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 4px);
+  transition: ease all .2s;
+}
+
+.navbar-toggler:not(.collapsed) .icon-bar:nth-child(2) {
+  opacity: 0;
+  transition: ease all .2s;
+}
+
+.navbar-toggler:not(.collapsed) .icon-bar:nth-child(3) {
+  transform: rotate(-45deg) translate(4px, -4px);
+  transition: ease all .2s;
+}
+
+/* -----------------------------------------------------------------------------
+  Logo
+----------------------------------------------------------------------------- */
+
+.navbar-brand .logo { 
+  height: 35px !important;
+  width: auto !important;
+  padding-top: 0;
+  padding-bottom: 0; 
+}
+
+/* -----------------------------------------------------------------------------
+  Animations
+----------------------------------------------------------------------------- */
+
+.slideanim {visibility:hidden;}
+
+.slide {
+  animation-name: slide;
+  -webkit-animation-name: slide; 
+  animation-duration: 1s; 
+  -webkit-animation-duration: 1s;
+  visibility: visible; 
+}
+
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(200%);
+  } 
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+  }
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(200%);
+  } 
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  } 
+}
+
+.tracking-in-expand-fwd-top {
+-webkit-animation: tracking-in-expand-fwd-top 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.5s both;
+        animation: tracking-in-expand-fwd-top 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.5s both;
+}
+
+@-webkit-keyframes tracking-in-expand-fwd-top {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px) translateY(-500px);
+            transform: translateZ(-700px) translateY(-500px);
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0.6;
+  }
+
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes tracking-in-expand-fwd-top {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px) translateY(-500px);
+            transform: translateZ(-700px) translateY(-500px);
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0.6;
+  }
+
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+  @-webkit-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+  @keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+} 
+
+/* -----------------------------------------------------------------------------
+  Social icons
+----------------------------------------------------------------------------- */
+
+.t_icon {
+  position: absolute;
+  top: 44%;
+  left: 5%;
+  height: 8%;
+  width: auto;
+  z-index: 1040;
+}
+
+.i_icon {
+  position: absolute;
+  top: 52%;
+  left: 22%;
+  height: 5%;
+  width: auto;
+  z-index: 1040;
+}
+
+.f_icon {
+  position: absolute;
+  top: 66%;
+  left: 13%;
+  height: 7%;
+  width: auto;
+  z-index: 1040;
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .t_icon {
+    left: 4%;
+  }
+  
+  .i_icon {
+    top: 55%;
+    left: 17%;
+  }
+
+  .f_icon {
+    top: 68%;
+    left: 7%;
+  }
+}
+
+@media all and (min-width: 576px) and (max-width: 767px) {
+  .t_icon {
+    top: 20%;
+    left: 47%;
+    height: 6%;
+  }
+  
+  .i_icon {
+    top: 20%;
+    left: 77%;
+    height: 6%;
+  }
+
+  .f_icon {
+    top: 20%;
+    left: 17%;
+    height: 6%;
+  }
+}
+
+@media all and (min-width: 380px) and (max-width: 575px) {
+  .t_icon {
+    top: 20%;
+    left: 47%;
+    height: 6%;
+  }
+  
+  .i_icon {
+    top: 20%;
+    left: 77%;
+    height: 6%;
+  }
+
+  .f_icon {
+    top: 20%;
+    left: 17%;
+    height: 6%;
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 379px) {
+  .t_icon {
+    top: 20%;
+    left: 45%;
+    height: 6%;
+  }
+  
+  .i_icon {
+    top: 20%;
+    left: 72%;
+    height: 6%;
+  }
+
+  .f_icon {
+    top: 20%;
+    left: 17%;
+    height: 6%;
+  }
+}
+
+@media (max-width: 319px) {
+  .t_icon {
+    top: 20%;
+    left: 45%;
+    height: 5%;
+  }
+  
+  .i_icon {
+    top: 20%;
+    left: 72%;
+    height: 5%;
+  }
+
+  .f_icon {
+    top: 20%;
+    left: 17%;
+    height: 5%;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+  Text
+----------------------------------------------------------------------------- */
+
+.title {
+  padding: 0 0 20px 0;
+  font-size: 90px;
+  font-family: 'Paytone One', sans-serif;
+  color: #FAAF41;
+}
+
+.subtitle {
+  position: relative;
+  padding: 0 0 90px 0;
+  font-size: 20px;
+  font-family: 'Righteous', cursive;
+  color: #F3FAFE;
+  z-index: 1030 !important;
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .title {
+    padding: 0 0 30px 0;
+    font-size: 60px;
+  }
+  .subtitle {
+    padding: 0 0 30px 0;
+  }
+}
+
+@media all and (min-width: 576px) and (max-width: 767px)
+  and (min-height: 0px) and (max-height: 1050px) {
+  .title {
+    padding: 0 0 15px 0;
+    font-size: 50px;
+  }
+  .subtitle {
+    padding: 0 0 15px 0;
+  }
+}
+
+@media all and (min-width: 380px) and (max-width: 575px)
+  and (min-height: 0px) and (max-height: 1050px) {
+  .title {
+    padding: 0 0 15px 0;
+    font-size: 40px;
+  }
+  .subtitle {
+    padding: 0 0 15px 0;
+    font-size: 15px;
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 379px) 
+  and (min-height: 0px) and (max-height: 1050px) {
+  .title {
+    padding: 0 0 10px 0;
+    font-size: 30px;
+  }
+  .subtitle {
+    padding: 0 0 10px 0;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 319px) {
+  .title {
+    padding: 50px 0 10px 0;
+    font-size: 20px;
+  }
+  .subtitle {
+    padding: 0 0 10px 0;
+    font-size: 15px;
+  }
+}
+
+.s2-title {
+  position: relative;
+  padding: 5px 0 0 0 !important;
+  font-size: 40px;
+  font-family: 'Righteous', cursive;
+  color: #F3FAFE;
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .s2-title {
+    padding: 5px 0 0 0 !important;
+    font-size: 35px;
+  }
+}
+
+@media all and (min-width: 576px) and (max-width: 767px)
+  and (min-height: 0px) and (max-height: 1050px) {
+  .s2-title {
+    padding: 20px 0 0 0 !important;
+    font-size: 35px;
+  }
+}
+
+@media all and (min-width: 380px) and (max-width: 575px)
+  and (min-height: 0px) and (max-height: 1050px) {
+  .s2-title {
+    padding: 20px 0 0 0 !important;
+    font-size: 30px;
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 379px) 
+  and (min-height: 0px) and (max-height: 1050px) {
+  .s2-title {
+    padding: 20px 0 0 0 !important;
+    font-size: 30px;
+    margin: 0 !important;
+  }
+}
+
+@media all and (max-width: 319px) {
+  .s2-title {
+    padding: 20px 0 0 0 !important;
+    font-size: 18px;
+    margin: 0 !important;
+  }
+}
+
+.s2-text {
+  position: relative;
+  padding: 0 30px 150px 30px !important;
+  font-size: 18px;
+  font-family: 'Righteous', cursive;
+  color: #F3FAFE;
+  z-index: 1020;
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .s2-text {
+    padding: 0 0 60px 15px !important;
+    font-size: 12px;
+  }
+}
+
+@media all and (min-width: 576px) and (max-width: 767px)
+  and (min-height: 0px) and (max-height: 1050px) {
+  .s2-text {
+    padding: 8px 0 25px 20px !important;
+    font-size: 12px;
+  }
+}
+
+@media all and (min-width: 380px) and (max-width: 575px)
+  and (min-height: 0px) and (max-height: 1050px) {
+  .s2-text {
+    padding: 0 0 10px 28px !important;
+    font-size: 12px;
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 379px) 
+  and (min-height: 0px) and (max-height: 1050px) {
+  .s2-text {
+    padding: 10px 0 20px 20px !important;
+    font-size: 12px;
+    margin: 0 !important;
+  }
+}
+
+@media all and (max-width: 319px) {
+  .s2-text {
+    padding: 10px 0 20px 20px !important;
+    font-size: 10px;
+    margin: 0 !important;
+  }
+}
+
+.s3-title {
+  position: relative;
+  padding: 5px 0 0 0 !important;
+  font-size: 40px;
+  font-family: 'Righteous', cursive;
+  color: #F3FAFE;
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .s3-title {
+    padding: 5px 0 0 0 !important;
+    font-size: 35px;
+  }
+}
+
+@media all and (min-width: 576px) and (max-width: 767px)
+  and (min-height: 0px) and (max-height: 1050px) {
+  .s3-title {
+    padding: 20px 0 0 0 !important;
+    font-size: 35px;
+  }
+}
+
+@media all and (min-width: 380px) and (max-width: 575px)
+  and (min-height: 0px) and (max-height: 1050px) {
+  .s3-title {
+    padding: 20px 0 0 0 !important;
+    font-size: 30px;
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 379px) 
+  and (min-height: 0px) and (max-height: 1050px) {
+  .s3-title {
+    padding: 20px 0 0 0 !important;
+    font-size: 30px;
+    margin: 0 !important;
+  }
+}
+
+@media (max-width: 319px) {
+  .s3-title {
+    padding: 20px 0 0 0 !important;
+    font-size: 18px;
+    margin: 0 !important;
+  }
+}
+
+.s3-text {
+  position: relative;
+  padding: 0 30px 200px 30px !important;
+  font-size: 18px;
+  font-family: 'Righteous', cursive;
+  /*font-family: 'Teko', sans-serif;*/
+  color: #F3FAFE;
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .s3-text {
+    padding: 0 0 60px 15px !important;
+    font-size: 12px;
+  }
+}
+
+@media all and (min-width: 576px) and (max-width: 767px)
+  and (min-height: 0px) and (max-height: 1050px) {
+  .s3-text {
+    padding: 8px 30px 25px 20px !important;
+    font-size: 12px;
+  }
+}
+
+@media all and (min-width: 380px) and (max-width: 575px)
+  and (min-height: 0px) and (max-height: 1050px) {
+  .s3-text {
+    padding: 0 0 10px 28px !important;
+    font-size: 12px;
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 379px) 
+  and (min-height: 0px) and (max-height: 1050px) {
+  .s3-text {
+    padding: 10px 0 0 20px !important;
+    font-size: 12px;
+    margin: 0 !important;
+  }
+}
+
+@media (max-width: 319px) {
+  .s3-text {
+    padding: 10px 0 0 20px !important;
+    font-size: 10px;
+    margin: 0 !important;
+  }
+}
+
+.s4-title {
+  position: relative;
+  padding: 0 0 30px 0 !important;
+  font-size: 60px;
+  font-family: 'Righteous', cursive;
+  color: #10173E !important;
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .s4-title {
+    padding: 20px 0 10px 0 !important;
+    font-size: 35px;
+  }
+}
+
+@media all and (min-width: 576px) and (max-width: 767px)
+  and (min-height: 0px) and (max-height: 1050px) {
+  .s4-title {
+    padding: 10px 0 10px 0 !important;
+    font-size: 35px;
+  }
+}
+
+@media all and (min-width: 380px) and (max-width: 575px)
+  and (min-height: 0px) and (max-height: 1050px) {
+  .s4-title {
+    padding: 20px 0 10px 0 !important;
+    font-size: 30px;
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 379px) 
+  and (min-height: 0px) and (max-height: 1050px) {
+  .s4-title {
+    padding: 0 0 20px 0 !important;
+    font-size: 30px;
+    margin: 0 !important;
+  }
+}
+
+@media (max-width: 319px) {
+  .s4-title {
+    padding: 0 0 20px 0 !important;
+    font-size: 20px;
+    margin: 0 !important;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+  Button
+----------------------------------------------------------------------------- */
+
+.btn-primary {
+  position: relative;
+  width: 240px !important;
+  height: 60px !important;
+  margin: 0 0 50px 0 !important;
+  color: #F3FAFE;
+  background-color: transparent !important;
+  border: 4px solid #F3FAFE !important;
+  border-radius: 40px !important;
+  z-index: 1030 !important;
+  font-family: 'Righteous', cursive;
+}
+
+.btn-primary:hover {
+  color: #121430 !important;
+  background-color: #F3FAFE !important;
+  border: 5px solid #F3FAFE !important;
+}
+
+.btn-primary:focus {
+  box-shadow: none !important;
+}
+
+.btn-primary-text {
+  padding-top: 7px;
+}
+
+@media all and (min-width: 576px) and (max-width: 767px)
+  and (min-height: 0px) and (max-height: 1050px) {
+  .btn-primary {
+    position: relative;
+    width: 210px !important;
+    height: 40px !important;
+    font-size: 15px !important;
+    border: 3px solid #F3FAFE !important;
+  }
+
+  .btn-primary-text {
+    padding-top: 1px;
+  }
+}
+
+@media all and (min-width: 380px) and (max-width: 575px)
+  and (min-height: 0px) and (max-height: 1050px) {
+  .btn-primary {
+    position: relative;
+    width: 180px !important;
+    height: 40px !important;
+    font-size: 13px !important;
+    border: 3px solid #F3FAFE !important;
+  }
+
+  .btn-primary-text {
+    padding-top: 1px;
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 379px) {
+  .btn-primary {
+    position: relative;
+    width: 190px !important;
+    height: 40px !important;
+    font-size: 13px !important;
+    border: 3px solid #F3FAFE !important;
+  }
+
+  .btn-primary-text {
+    padding-top: 1px;
+  }
+}
+
+@media (max-width: 319px) {
+  .btn-primary {
+    position: relative;
+    width: 140px !important;
+    height: 30px !important;
+    font-size: 8px !important;
+    border: 3px solid #F3FAFE !important;
+  }
+
+  .btn-primary-text {
+    padding-top: 1px;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+  Form-control
+----------------------------------------------------------------------------- */
+
+#n-questions {
+  position: relative;
+  width: 30%;
+  margin: 0 0 45px 0;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: solid #121430 !important;
+  background-color: transparent;
+  font-family: 'Kodchasan', sans-serif;
+  font-size: 15px;
+  text-align: center;
+  z-index: 1030 !important;
+}
+
+.form-control {
+  color: #121430 !important;
+}
+
+@media all and (min-width: 576px) and (max-width: 767px) {
+
+  #n-questions {
+    width: 60%;
+    border-bottom: solid #121430 !important;
+    margin: 0 0 25px 0;
+  }
+
+  .form-control {
+    background-color: transparent !important;
+    color: #121430 !important;
+  }
+}
+
+@media all and (min-width: 380px) and (max-width: 575px) {
+
+  #n-questions {
+    width: 60%;
+    border-bottom: 3px solid #121430 !important;
+    margin: 0 0 15px 0;
+  }
+
+  .form-control {
+    background-color: transparent !important;
+    color: #121430 !important;
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 379px) {
+
+  #n-questions {
+    width: 60%;
+    border-bottom: 2px solid #121430 !important;
+    margin: 0 0 25px 0;
+    font-size: 10px;
+  }
+
+  .form-control {
+    background-color: transparent !important;
+    color: #121430 !important;
+  }
+
+}
+
+@media (max-width: 319px) {
+
+  #n-questions {
+    width: 65%;
+    border-bottom: 2px solid #121430 !important;
+    margin: 0 0 25px 0;
+    font-size: 10px;
+  }
+
+  .form-control {
+    background-color: transparent !important;
+    color: #121430 !important;
+  }
+
+}
+
+input::-webkit-input-placeholder {
+  color: #121430 !important;
+}
+    
+input:-moz-placeholder {
+  color: #121430 !important;
+}
+    
+input::-moz-placeholder {
+  color: #121430 !important; 
+}
+    
+input:-ms-input-placeholder {  
+  color: #121430 !important;  
+}
+
+.form-control:focus {
+  box-shadow: none !important;
+  font-weight: bold;
+}
+
+:focus::-webkit-input-placeholder{
+  text-indent: -999px
+}
+
+:focus::-moz-placeholder{
+  text-indent: -999px
+}
+
+/* -----------------------------------------------------------------------------
+  Tooltip
+----------------------------------------------------------------------------- */
+
+.tippy-tooltip.light-theme {
+  background-color: rgba(243, 250, 254, 0.87);
+  color: #121430;
+  padding: 5px !important;
+  border-radius: 20px;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.151) !important;
+}
+
+.tippy-tooltip.light-theme[data-animatefill] {
+  background-color: transparent;
+}
+
+.tippy-tooltip.dark-theme {
+  background-color: rgba(16, 23, 62, 0.945);
+  color: white;
+  padding: 5px !important;
+  border-radius: 20px;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.151) !important;
+}
+
+.tippy-tooltip.dark-theme[data-animatefill] {
+  background-color: transparent;
+}
+
+.tooltip-text {
+  padding: 10px !important;
+  text-align: left;
+  font-family: 'Cairo', sans-serif;
+  font-size: 14px !important;
+}
+
+@media all and (min-width: 320px) and (max-width: 379px) {
+  .tooltip-text {
+    padding: 4px !important;
+    font-size: 10px !important;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+  Section 1
+----------------------------------------------------------------------------- */
+
+.image {
+  position: absolute;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1000;
+}
+
+.bg-s1 {
+  position: relative;
+  background-image: url("../img/bg-s1.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.bg-s1-front {
+  bottom: -1%;
+  left: 0%;
+  height: auto;
+  width: 100%;
+}
+
+.bg-s1-front-line {
+  bottom: 11%;
+  left: 0%;
+  height: auto;
+  width: 80%;
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .bg-s1-front-line {
+    bottom: 12%;
+    height: auto;
+    width: 80%;
+  }
+}
+
+@media all and (min-width: 576px) and (max-width: 767px) {
+  .bg-s1-front-line {
+    bottom: 13%;
+    height: auto;
+    width: 80%;
+  }
+}
+
+@media all and (min-width: 425px) and (max-width: 575px) {
+  .bg-s1-front-line {
+    bottom: 13%;
+    height: auto;
+    width: 80%;
+  }
+}
+
+@media all and (min-width: 375px) and (max-width: 424px) {
+  .bg-s1-front-line {
+    bottom: 12%;
+    height: auto;
+    width: 80%;
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 374px) {
+  .bg-s1-front-line {
+    bottom: 13%;
+    height: auto;
+    width: 80%;
+  }
+}
+
+.astronaut {
+  bottom: 5%;
+  z-index: 1000;
+  right: 9%;
+  height: 39%;
+  width: auto;
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .astronaut {
+    bottom: 4%;
+    right: 7%;
+    height: 32%;
+  }
+}
+
+@media all and (min-width: 576px) and (max-width: 767px) {
+  .astronaut {
+    bottom: 4%;
+    right: 7%;
+    height: 32%;
+  }
+}
+
+@media all and (min-width: 425px) and (max-width: 575px) {
+  .astronaut {
+    bottom: 4%;
+    right: 9%;
+    height: 30%;
+  }
+}
+
+@media all and (min-width: 375px) and (max-width: 424px) {
+  .astronaut {
+    bottom: 3%;
+    right: 6%;
+    height: 30%;
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 374px) {
+  .astronaut {
+    bottom: 5%;
+    right: 8%;
+    height: 26%;
+  }
+}
+
+@media (max-width: 319px) {
+  .astronaut {
+    bottom: 1%;
+    right: 8%;
+    height: 26%;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+  Section 2
+----------------------------------------------------------------------------- */
+
+.bg-s2 {
+  position: relative;
+  background-image: url("../img/bg-s2.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.bg-s2-front {
+  bottom: -1%;
+  left: 0%;
+  height: auto;
+  width: 100%;
+}
+
+#sun {
+  top: 10%;
+  left: 0%;
+  height: 80%;
+  width: auto;
+}
+
+#mercury {
+  top: 40%;
+  left: 28%;
+  height: 10%;
+  width: auto;
+}
+
+#venus {
+  top: 20%;
+  left: 38%;
+  height: 15%;
+  width: auto;
+}
+
+#earth {
+  top: 50%;
+  left: 41%;
+  height: 13%;
+  width: auto;
+}
+
+#mars {
+  top: 36%;
+  left: 54%;
+  height: 15%;
+  width: auto;
+}
+
+#jupiter {
+  top: 21%;
+  left: 61%;
+  height: 18%;
+  width: auto;
+}
+
+#saturn {
+  top: 46%;
+  left: 67%;
+  height: 12%;
+  width: auto;
+}
+
+#uranus {
+  top: 56%;
+  left: 81%;
+  height: 15%;
+  width: auto;
+}
+
+#neptun {
+  top: 30%;
+  left: 86%;
+  height: 10%;
+  width: auto;
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+  #sun {
+    top: 10%;
+    left: 0%;
+    height: 80%;
+    width: auto;
+  }
+  
+  #mercury {
+    top: 40%;
+    left: 33%;
+    height: 10%;
+    width: auto;
+  }
+  
+  #venus {
+    top: 15%;
+    left: 43%;
+    height: 15%;
+    width: auto;
+  }
+  
+  #earth {
+    top: 60%;
+    left: 40%;
+    height: 13%;
+    width: auto;
+  }
+  
+  #mars {
+    top: 40%;
+    left: 53%;
+    height: 15%;
+    width: auto;
+  }
+  
+  #jupiter {
+    top: 18%;
+    left: 64%;
+    height: 18%;
+    width: auto;
+  }
+  
+  #saturn {
+    top: 43%;
+    left: 71%;
+    height: 12%;
+    width: auto;
+  }
+  
+  #uranus {
+    top: 56%;
+    left: 82%;
+    height: 15%;
+    width: auto;
+  }
+  
+  #neptun {
+    top: 63%;
+    left: 62%;
+    height: 15%;
+    width: auto;
+  }
+}
+
+@media all and (min-width: 576px) and (max-width: 767px) {
+  #sun {
+    top: 17%;
+    left: 0%;
+    height: 40%;
+    width: auto;
+  }
+  
+  #mercury {
+    top: 15%;
+    left: 34%;
+    height: 10%;
+    width: auto;
+  }
+  
+  #venus {
+    top: 33%;
+    left: 40%;
+    height: 15%;
+    width: auto;
+  }
+  
+  #earth {
+    top: 52%;
+    left: 22%;
+    height: 13%;
+    width: auto;
+  }
+  
+  #mars {
+    top: 70%;
+    left: 25%;
+    height: 15%;
+    width: auto;
+  }
+  
+  #jupiter {
+    top: 20%;
+    left: 61%;
+    height: 18%;
+    width: auto;
+  }
+  
+  #saturn {
+    top: 49%;
+    left: 60%;
+    height: 12%;
+    width: auto;
+  }
+  
+  #uranus {
+    top: 60%;
+    left: 50%;
+    height: 15%;
+    width: auto;
+  }
+  
+  #neptun {
+    top: 77%;
+    left: 74%;
+    height: 10%;
+    width: auto;
+  }
+}
+
+@media all and (min-width: 375px) and (max-width: 575px) {
+  #sun {
+    top: 10%;
+    left: 0%;
+    height: 40%;
+    width: auto;
+  }
+  
+  #mercury {
+    top: 11%;
+    left: 34%;
+    height: 10%;
+    width: auto;
+  }
+  
+  #venus {
+    top: 33%;
+    left: 41%;
+    height: 15%;
+    width: auto;
+  }
+  
+  #earth {
+    top: 52%;
+    left: 8%;
+    height: 13%;
+    width: auto;
+  }
+  
+  #mars {
+    top: 70%;
+    left: 19%;
+    height: 15%;
+    width: auto;
+  }
+  
+  #jupiter {
+    top: 17%;
+    left: 58%;
+    height: 16%;
+    width: auto;
+  }
+  
+  #saturn {
+    top: 48%;
+    left: 50%;
+    height: 12%;
+    width: auto;
+  }
+  
+  #uranus {
+    top: 60%;
+    left: 45%;
+    height: 15%;
+    width: auto;
+  }
+  
+  #neptun {
+    top: 77%;
+    left: 71%;
+    height: 10%;
+    width: auto;
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 374px) {
+  #sun {
+    top: 17%;
+    left: 0%;
+    height: 40%;
+    width: auto;
+  }
+  
+  #mercury {
+    top: 12%;
+    left: 38%;
+    height: 8%;
+    width: auto;
+  }
+  
+  #venus {
+    top: 35%;
+    left: 57%;
+    height: 13%;
+    width: auto;
+  }
+  
+  #earth {
+    top: 59%;
+    left: 11%;
+    height: 11%;
+    width: auto;
+  }
+  
+  #mars {
+    top: 72%;
+    left: 25%;
+    height: 13%;
+    width: auto;
+  }
+  
+  #jupiter {
+    top: 20%;
+    left: 56%;
+    height: 13%;
+    width: auto;
+  }
+  
+  #saturn {
+    top: 51%;
+    left: 39%;
+    height: 10%;
+    width: auto;
+  }
+  
+  #uranus {
+    top: 60%;
+    left: 55%;
+    height: 15%;
+    width: auto;
+  }
+  
+  #neptun {
+    top: 78%;
+    left: 66%;
+    height: 10%;
+    width: auto;
+  }
+}
+
+@media (max-width: 319px) {
+  #sun {
+    top: 17%;
+    left: 0%;
+    height: 40%;
+    width: auto;
+  }
+  
+  #mercury {
+    top: 12%;
+    left: 38%;
+    height: 8%;
+    width: auto;
+  }
+  
+  #venus {
+    top: 35%;
+    left: 57%;
+    height: 13%;
+    width: auto;
+  }
+  
+  #earth {
+    top: 59%;
+    left: 11%;
+    height: 11%;
+    width: auto;
+  }
+  
+  #mars {
+    top: 72%;
+    left: 25%;
+    height: 13%;
+    width: auto;
+  }
+  
+  #jupiter {
+    top: 20%;
+    left: 56%;
+    height: 13%;
+    width: auto;
+  }
+  
+  #saturn {
+    top: 51%;
+    left: 39%;
+    height: 10%;
+    width: auto;
+  }
+  
+  #uranus {
+    top: 60%;
+    left: 44%;
+    height: 15%;
+    width: auto;
+  }
+  
+  #neptun {
+    top: 74%;
+    left: 68%;
+    height: 10%;
+    width: auto;
+  }
+}
+
+/* ----------------------------------------------------------------------------- 
+  Section 3
+----------------------------------------------------------------------------- */
+
+.bg-s3 {
+  position: relative;
+  background-image: url("../img/bg-s3.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.bg-s3-cloud-front {
+  bottom: -1%;
+  left: 0%;
+  height: auto;
+  width: 100%;
+}
+
+.bg-s3-cloud-back {
+  bottom: 0%;
+  left: 0%;
+  height: auto;
+  width: 100%;
+}
+
+#moon {
+  top: 7%;
+  left: 15%;
+  height: 13%;
+  width: auto;
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+  #moon {
+    top: 17%;
+    left: 17%;
+  }
+}
+
+@media all and (min-width: 576px) and (max-width: 767px) {
+  #moon {
+    top: 17%;
+    left: 17%;
+  }
+}
+
+@media all and (min-width: 375px) and (max-width: 575px) {
+  #moon {
+    top: 17%;
+    left: 17%;
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 374px) {
+  #moon {
+    top: 17%;
+    left: 17%;
+  }
+}
+
+@media (max-width: 319px) {
+  #moon {
+    top: 18%;
+    left: 17%;
+  }
+}
+
+.rocket {
+  position: absolute;
+  bottom: 0%;
+  width: auto;
+}
+
+@media all and (min-width: 720px) {
+  .rocket {
+    left: 50%;
+    transform: translateX(-50%);
+    height: 85%;
+  }
+}
+
+@media all and (min-width: 425px) and (max-width: 719px) {
+  .rocket {
+    right: 12%;
+    height: 80%;
+  }
+}
+
+@media all and (min-width: 375px) and (max-width: 424px) {
+  .rocket {
+    right: 12%;
+    height: 75%;
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 374px) {
+  .rocket {
+    right: 10%;
+    height: 65%;
+  }
+}
+
+@media (max-width: 319px) {
+  .rocket {
+    right: 10%;
+    height: 60%;
+  }
+}
+
+.meteor {
+  top: 12%;
+  left: 62%;
+  height: 15%;
+  width: auto;
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .meteor {
+    top: 10%;
+    left: 65%;
+  }
+}
+
+@media all and (min-width: 576px) and (max-width: 767px) {
+  .meteor {
+    top: 61%;
+    left: 15%; 
+  }
+}
+
+@media all and (min-width: 425px) and (max-width: 575px) {
+  .meteor {
+    top: 61%;
+    left: 18%;  
+  }
+}
+
+@media all and (min-width: 375px) and (max-width: 424px) {
+  .meteor {
+    top: 68%;
+    left: 13%;
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 374px) {
+  .meteor {
+    top: 68%;
+    left: 13%;
+  }
+}
+
+@media (max-width: 319px) {
+  .meteor {
+    top: 70%;
+    left: 13%;
+  }
+}
+
+/* ----------------------------------------------------------------------------- 
+  Section 4
+----------------------------------------------------------------------------- */
+
+#start-content {
+  z-index: 1020;
+}
+
+.bg-s4 {
+  position: relative;
+  background-image: url("../img/bg-s4.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.bg-s4-front {
+  bottom: 0%;
+  left: 0%;
+  height: 5%;
+  width: 100%;
+}
+
+#quiz_img {
+  position: absolute;
+  top: 17%;
+  left: 50%;
+  transform: translateX(-50%)
+}
+
+.satellite {
+  bottom: 0%;
+  left: 5%;
+  height: 30%;
+  width: auto;
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .satellite {
+    bottom: 0%;
+    left: 5%;
+    height: 24%;
+  }
+}
+
+@media all and (min-width: 576px) and (max-width: 767px) {
+  .satellite {
+    bottom: 0%;
+    left: 5%;
+    height: 22%;
+  }
+}
+
+@media all and (min-width: 425px) and (max-width: 575px) {
+  .satellite {
+    bottom: 0%;
+    left: 5%;
+    height: 19%;
+  }
+}
+
+@media all and (min-width: 375px) and (max-width: 424px) {
+  .satellite {
+    bottom: 1%;
+    left: 5%;
+    height: 17%;
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 374px) {
+  .satellite {
+    bottom: 2%;
+    left: 5%;
+    height: 13%;
+  }
+}
+
+@media (max-width: 319px) {
+  .satellite {
+    bottom: 2%;
+    left: 5%;
+    height: 13%;
+  }
+}
+
+.observatory {
+  bottom: 0%;
+  right: 5%;
+  height: 85%;
+  width: auto;
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .observatory {
+    bottom: 2%;
+    right: 5%;
+    height: 70%;
+  }
+}
+
+@media all and (min-width: 576px) and (max-width: 767px) {
+  .observatory {
+    bottom: 2%;
+    right: 5%;
+    height: 65%;
+  }
+}
+
+@media all and (min-width: 425px) and (max-width: 575px) {
+  .observatory {
+    bottom: 2%;
+    right: 5%;
+    height: 52%;
+  }
+}
+
+@media all and (min-width: 375px) and (max-width: 424px) {
+  .observatory {
+    bottom: 2%;
+    right: 5%;
+    height: 50%;
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 374px) {
+  .observatory {
+    bottom: 2%;
+    right: 5%;
+    height: 40%;
+  }
+}
+
+@media (max-width: 319px) {
+  .observatory {
+    bottom: 2%;
+    right: 5%;
+    height: 40%;
+  }
+}
+
+/* ----------------------------------------------------------------------------- 
+  Quiz
+----------------------------------------------------------------------------- */
+
+.hide {
+  display: none;
+}
+
+#button-start {
+  cursor: pointer;
+}
+
+#question-text {
+  font-size: 30px;
+  font-family: 'Righteous', cursive;
+  padding: 80px 0 40px 0;
+}
+
+.btn-secondary {
+  position: relative;
+  width: 210px !important;
+  height: 50px !important;
+  margin: 0 0 50px 0 !important;
+  color: #121430 !important;
+  background-color: transparent !important;
+  border: 4px solid #121430 !important;
+  border-radius: 40px !important;
+  z-index: 1030 !important;
+  font-family: 'Righteous', cursive;
+}
+
+.btn-secondary:hover {
+  color: #F3FAFE !important;
+  background-color: #121430 !important;
+  border: 5px solid #121430 !important;
+}
+
+.btn-secondary:focus {
+  box-shadow: none !important;
+}
+
+#result {
+  font-size: 20px;
+  font-family: 'Righteous', cursive;
+  padding: 70px 0px 0px 0px !important;
+}
+
+#star {
+  display: block !important;
+  float: right !important;
+  margin-left: 10px !important;
+}
+
+.congrats {
+  font-size: 60px !important;
+}
+
+#reward {
+  font-size: 50px !important;
+}
+
+#answers {
+  padding: 140px 0 20px 0;
+}
+
+#content-a-q {
+  font-size: 20px;
+  font-family: 'Righteous', cursive;
+  padding: 0 0 20px 0;
+}
+
+#content-a-a {
+  font-size: 20px;
+  font-family: 'Righteous', cursive;
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+
+  #quiz_img {
+    position: absolute;
+    top: 17%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 9% !important;
+  }
+
+  #question-text {
+    font-size: 23px;
+    padding: 120px 0 40px 0;
+  }
+
+  .btn-secondary {
+    position: relative;
+    width: 210px !important;
+    height: 40px !important;
+    margin: 0 0 20px 0 !important;
+    font-size: 15px !important;
+    border: 3px solid #121430 !important;
+  }
+
+  .congrats {
+    font-size: 55px !important;
+  }
+
+  #answers {
+    padding: 120px 0 20px 0;
+  }
+
+  #content-a-q {
+    font-size: 18px;
+  }
+  
+  #content-a-a {
+    font-size: 18px;
+  }
+}
+
+@media all and (min-width: 576px) and (max-width: 767px) {
+
+  #quiz_img {
+    position: absolute;
+    top: 17%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 9% !important;
+  }
+
+  #question-text {
+    font-size: 20px;
+    padding: 40px 0 40px 0;
+  }
+
+  .btn-secondary {
+    position: relative;
+    width: 210px !important;
+    height: 40px !important;
+    margin: 0 0 20px 0 !important;
+    font-size: 15px !important;
+    border: 3px solid #121430 !important;
+  }
+
+  .congrats {
+    font-size: 45px !important;
+  }
+
+  #answers {
+    padding: 100px 0 20px 0;
+  }
+
+  #content-a-q {
+    font-size: 17px;
+  }
+  
+  #content-a-a {
+    font-size: 17px;
+  }
+}
+
+@media all and (min-width: 425px) and (max-width: 575px) {
+
+  #quiz_img {
+    position: absolute;
+    top: 17%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 9% !important;
+  }
+
+  #question-text {
+    font-size: 18px;
+    padding: 20px 0 40px 0;
+  }
+
+  .btn-secondary {
+    position: relative;
+    width: 180px !important;
+    height: 40px !important;
+    margin: 0 0 20px 0 !important;
+    font-size: 15px !important;
+    border: 3px solid #121430 !important;
+  }
+
+  .congrats {
+    font-size: 38px !important;
+  }
+
+  #reward {
+    font-size: 40px !important;
+  }
+
+  #answers {
+    padding: 90px 0 20px 0;
+  }
+
+  #content-a-q {
+    font-size: 15px;
+  }
+  
+  #content-a-a {
+    font-size: 15px;
+  }
+}
+
+@media all and (min-width: 375px) and (max-width: 424px) {
+
+  #quiz_img {
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 8% !important;
+  }
+
+  #question-text {
+    font-size: 17px;
+    padding: 90px 0 40px 0;
+  }
+
+  .btn-secondary {
+    position: relative;
+    width: 180px !important;
+    height: 40px !important;
+    margin: 0 0 20px 0 !important;
+    font-size: 13px !important;
+    border: 3px solid #121430 !important;
+  }
+
+  .congrats {
+    font-size: 35px !important;
+  }
+
+  #reward {
+    font-size: 30px !important;
+  }
+
+  #answers {
+    padding: 70px 0 20px 0;
+  }
+
+  #content-a-q {
+    font-size: 13px;
+  }
+  
+  #content-a-a {
+    font-size: 13px;
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 374px) {
+
+  #quiz_img {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 8% !important;
+  }
+
+  #question-text {
+    padding: 100px 0 40px 0 !important;
+  }
+
+  .btn-secondary {
+    position: relative;
+    width: 190px !important;
+    height: 40px !important;
+    margin: 0 0 20px 0 !important;
+    font-size: 13px !important;
+    border: 3px solid #121430 !important;
+  }
+
+  #question-text {
+    font-size: 15px;
+    padding: 0 0 20px 0;
+  }
+
+  .congrats {
+    font-size: 28px !important;
+  }
+
+  #reward {
+    font-size: 30px !important;
+  }
+
+  #answers {
+    padding: 50px 0 20px 0;
+  }
+
+  #content-a-q {
+    font-size: 13px;
+  }
+  
+  #content-a-a {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 319px) {
+
+  #quiz_img {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 8% !important;
+  }
+
+  #question-text {
+    padding: 100px 0 40px 0 !important;
+  }
+
+  .btn-secondary {
+    position: relative;
+    width: 190px !important;
+    height: 40px !important;
+    margin: 0 0 20px 0 !important;
+    font-size: 13px !important;
+    border: 3px solid #121430 !important;
+  }
+
+  #question-text {
+    font-size: 15px;
+    padding: 0 0 20px 0;
+  }
+
+  .congrats {
+    font-size: 28px !important;
+  }
+
+  #reward {
+    font-size: 30px !important;
+  }
+
+  #answers {
+    padding: 50px 0 20px 0;
+  }
+
+  #content-a-q {
+    font-size: 13px;
+  }
+  
+  #content-a-a {
+    font-size: 13px;
+  }
+}
